@@ -3,6 +3,8 @@
 ### this program takes an input from a file, and trims it to 64 bytes
 ### it then generates another shasum from an input.
 ### it compares the password attempt three times then fails the program
+#echo "Please set password"; read
+#echo -n $REPLY | sha256sum | cut -b 1-64 > secret.txt
 
 info_test=$(cut -b 1-64 secret.txt)
 
